@@ -10,9 +10,6 @@ module PortForwarding
       greeting
     end
 
-    def load_servers
-    end
-
     def forward
       # cycle throught all the management ips
       servers.each do |server|
