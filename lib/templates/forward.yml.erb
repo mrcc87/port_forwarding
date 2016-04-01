@@ -1,0 +1,22 @@
+---
+# forward.yml configuration
+# management_ip = the management ip of the machine which will serve as bridge
+# username = username for ssh connection
+# password = password for the ssh user
+# production_ips = list of production ips to which you want to connect.
+#   - ip = specific production ip
+#     remote_ports = list of remote ports to which you want to create the tunner
+#     local_ports = list of local ports to which tie the specific tunnel
+#
+#  NOTES:
+#  1) the bridge machine has to be able to reach the sockets (ip:remote_port combination)
+#  2) local_ports list has to be equal to remote_ports list. If you want the local port to be the same
+#     as the remote port set it to 0. If you want the local port to be different set the specific port.
+# 
+- management_ip: 172.19.131.80
+  username: ci
+  password: ci
+  production_ips:
+    - ip: 172.26.194.60
+      remote_ports: [8080]
+      local_ports: [0]
