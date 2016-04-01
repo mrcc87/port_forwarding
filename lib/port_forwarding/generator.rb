@@ -21,7 +21,7 @@ module PortForwarding
       #     end
       #   end
       # end
-      puts "#{Dir.pwd/name}
+      puts "#{Dir.pwd}/#{name}"
     end
   end
 end
