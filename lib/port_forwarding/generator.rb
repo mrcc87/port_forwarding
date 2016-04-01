@@ -5,7 +5,7 @@ module PortForwarding
     def initialize(file_name)
       @name = name
     end
-    def render_templates(path)
+    def render_template
       # Dir.entries("erb/#{path}").each do |file|
       #   if File.file?("erb/#{path}/#{file}")
       #     input_file = "erb/#{path}/#{file}"
@@ -21,7 +21,7 @@ module PortForwarding
       #     end
       #   end
       # end
-      puts Dir.pwd
+      puts "#{Dir.pwd/name}
     end
   end
 end
