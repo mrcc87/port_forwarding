@@ -2,7 +2,7 @@ module PortForwarding
   class Generator
     attr_reader :name
 
-    def initialize(file_name)
+    def initialize(file_name="forward")
       @name = file_name
     end
     def render_template

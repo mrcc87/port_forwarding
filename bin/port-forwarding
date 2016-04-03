@@ -11,9 +11,10 @@ end
 case ARGV[0]
 when "generate"
   if ARGV[1].nil?
-    ARGV << "forward"
+    generator = PortForwarding::Generator.new
+  else
+    generator = PortForwarding::Generator.new(ARGV[1])
   end
-  generator = PortForwarding::Generator.new(ARGV[1])
   generator.render_template
 
 when "forward"
