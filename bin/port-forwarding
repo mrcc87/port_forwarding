@@ -24,4 +24,6 @@ when "forward"
   end
   port_for = PortForwarding::Forward.new ARGV[1]
   port_for.forward
+else
+  puts "Option not allowed"
 end
