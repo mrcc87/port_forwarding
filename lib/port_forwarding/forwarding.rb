@@ -47,9 +47,9 @@ module PortForwarding
               ssh.loop { true }
             end
           rescue Net::SSH::AuthenticationFailed
-            puts "Authentication failed on #{host}, for user #{hostname}"
+            puts "Authentication failed on #{management_ip}, for user #{username}"
           rescue Net::SSH::ConnectionTimeout
-            puts "Connection timeout to host #{host}"
+            puts "Connection timeout to host #{management_ip}"
           end
         }
 
