@@ -1,5 +1,6 @@
 require "net/ssh"
 require "artii"
+require "colorize"
 require "yaml"
 require "erb"
 

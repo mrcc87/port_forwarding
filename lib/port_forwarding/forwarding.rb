@@ -39,7 +39,7 @@ module PortForwarding
                   local_port = local_ports[remote_ports_index]
                   local_port = remote_port if local_port == 0
 
-                  puts "forwarding to #{production_ip}:#{remote_port} on local port #{local_port}"
+                  puts "forwarding to #{production_ip}:#{remote_port} on local port #{local_port}".green
                   ssh.forward.local(local_port, production_ip, remote_port)
                   remote_ports_index += 1
                 end
@@ -47,9 +47,9 @@ module PortForwarding
               ssh.loop { true }
             end
           rescue Net::SSH::AuthenticationFailed
-            puts "Authentication failed on #{management_ip}, for user #{username}"
+            puts "Authentication failed on #{management_ip}, for user #{username}".red
           rescue Net::SSH::ConnectionTimeout
-            puts "Connection timeout to host #{management_ip}"
+            puts "Connection timeout to host #{management_ip}".red
           end
         }
 
